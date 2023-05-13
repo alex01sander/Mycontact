@@ -1,3 +1,4 @@
+import Button from '../../components/Button';
 import PageHeader from '../../components/PageHeader';
 import Select from '../../components/Select.js';
 import Input from '../../components/input';
@@ -17,6 +18,9 @@ export default function NewContact() {
 
 
       </Select>
+      <Button type='button'>Salvar as Alterações</Button>
+      <Button type='button' disabled>Salvar as Alterações</Button>
+
     </>
   );
 }
