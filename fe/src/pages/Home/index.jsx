@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom';
 import { FaLongArrowAltUp, FaEdit, FaTrash } from 'react-icons/fa';
 import { Card, Container, Header, ListContainer, InputSearchContainer,
 } from './styles';
+import Modal from '../../components/Modal/Modal';
 
 export default function ContactsList() {
   return (
     <Container>
+
+      <Modal />
       <InputSearchContainer>
         <input type="text" placeholder="Pesquise pelo nome..." />
       </InputSearchContainer>
