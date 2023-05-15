@@ -1,7 +1,6 @@
+import { Link } from 'react-router-dom';
 import { FaLongArrowAltUp, FaEdit, FaTrash } from 'react-icons/fa';
-import {
-  Card,
-  Container, Header, ListContainer, InputSearchContainer,
+import { Card, Container, Header, ListContainer, InputSearchContainer,
 } from './styles';
 
 export default function ContactsList() {
@@ -12,7 +11,7 @@ export default function ContactsList() {
       </InputSearchContainer>
       <Header>
         <strong>3 Contatos </strong>
-        <a href="/">Novo Contato</a>
+        <Link to="/new">Novo Contato</Link>
       </Header>
       <ListContainer>
         <Header>
@@ -33,9 +32,9 @@ export default function ContactsList() {
             <span>51 9999-9999</span>
           </div>
           <div className="actions">
-            <a href="/">
+            <Link to="/edit/123">
               <FaEdit size="20" color="#5061fc" />
-            </a>
+            </Link>
             <button type="button">
               <FaTrash size="20" color="ff312e" />
             </button>
