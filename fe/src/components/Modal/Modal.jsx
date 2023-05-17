@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import { Container, Overlay, Footer } from "./styles"
+import  ReactDOM  from 'react-dom'
 import Button from '../Button'
 
 export default function Modal({danger}){
-    return(
+    return ReactDOM.createPortal(
         <Overlay> 
             <Container danger={danger}>
                  <h1>Modal...</h1>
@@ -17,9 +18,11 @@ export default function Modal({danger}){
                  </Footer>
             </Container>
 
-        </Overlay>
-
+        </Overlay>,
+        document.getElementById('modal-root'),
     )
+
+    
 }
 
 Modal.propTypes = {
